@@ -2,11 +2,23 @@
 #this script is going to require some googling: I want you to practice using your resources with this one. But of course if you get stuck, reach out :)
 '''instructions: randomly generate three values between 1 and 11. in the function bust: add these three numbers together. if they add up to or less than 21, return the sum. If it's over 21, return 0. If it's over 21 BUT there's an 11 as one of the values, return the sum - 10. '''
 
+import random
+
 def bust():
-    
-    
-    
+    list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    a = random.sample(list1, 3)
+    print(a)
+    print(sum(a))
+
+    if sum(a) <= 21:
+        return(sum(a))
+    elif sum(a) > 21 and 11 in a:
+        return(sum(a) - 10)
+    elif sum(a) > 21:
+        return(0)
+
+
 def main():
-    
+    print(bust())
 
 main()
