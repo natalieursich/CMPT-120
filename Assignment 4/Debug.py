@@ -30,7 +30,7 @@ def main():
     var1= 10
     var2= 20
     #What do we put in here to make it work?
-    print(addition(10, 20))
+    print(addition(var1, var2))
     
     num1 = int(input("Enter number 1"))
     num2 = int(input("Enter number 2"))
