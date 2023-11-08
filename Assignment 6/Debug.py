@@ -12,6 +12,9 @@ class Employee:
 class Cake:
     #can you fill out the rest of this for me? im dumb
     #the cake needs to have the cake flavor and cake frosting stored
+    def __init__(self, flavor, frosting):
+        self.flavor = flavor
+        self.frosting = frosting
 
 class Cat:
     def __init__(self, name, age, fur_length):
@@ -33,35 +36,43 @@ class Car:
         self.color = color
         
     #create your own function! what do you want it to do?
+    def oldCar(self):
+        if self.year < 2015:
+            return("old car")
+        else:
+            return("new car")
     
    
 def main():
     #fill this one out with a dog's name and age.. can be your dog, friend's dog, etc
-    newDog = Dog(? , ?)
-    print(dog1.name, dog1.age)
+    newDog = Dog("Dixie" , 7)
+    print(newDog.name, newDog.age)
     
     #and what about a new employee
-    newEmployee =
+    newEmployee = Employee("Bob", 819, "Retail")
     #how would we print out each of the variables from newEmployee?
-    print()
+    print(newEmployee.name, newEmployee.idNumber, newEmployee.department)
     
     #now create and print out a cake you make
-    
-    
+    myCake = Cake("Funfetti", "Vanilla")
+    print(myCake.flavor, myCake.frosting)
     
     #and now create another cake and print it out
-    
-    
+    nextCake = Cake("Chocolate", "Chocolate")
+    print(nextCake.flavor, nextCake.frosting)
     
     #create a cat!
-    cat1 = Cat()
+    cat1 = Cat("Sprinkles", 6, "long-haired")
     #create another cat!
+    cat2 = Cat("Kitty", 3, "short-haired")
+    print(cat2.name, cat2.age, cat2.fur_length)
     
     #What would we put here to print out the result of breedGuess for cat1?
-    print(cat1.?)
+    print(cat1.breedGuess())
     
     #create a car!
-    
+    car1 = Car("Ford Escape", 2020, "black")
     #Now print out the function you made for car :)
+    print(car1.model, car1.year, car1.color)
 
 main()
